@@ -18,7 +18,7 @@ const comingSoonProducts: ComingSoonProduct[] = [
   { name: 'Vintage Work Bag · Burgundy', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-16%20at%205.49.25%20PM-Alqy7vGm3MMMWYX51VJzC5CPWDiQIX.jpeg', tone: 'mauve', details: ['Structured vintage-inspired silhouette', 'Adjustable shoulder strap', 'Approx. 38 × 35 × 15 cm'], edition: 'Unstoppable Edition' },
 ]
 const everydayProducts: ComingSoonProduct[] = [
-  { name: 'The Study Tote', image: '/images/study-tote.jpeg', tone: 'blush', details: ['Fits laptops up to 16 inches', 'Approx. 42 × 32 × 15 cm', 'Multiple pockets and a padded laptop compartment', 'Lightweight design with an elegant bow detail'], edition: 'Everyday Edition' },
+  { name: 'The Study Tote', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tote%20That%20Girl%2C%20%C3%A9l%C3%A9gance%20pastel-hN9gDBSKaN4uY2G2iovFgKBDzkMjkg.png', tone: 'blush', details: ['Fits laptops up to 16 inches', 'Approx. 42 × 32 × 15 cm', 'Multiple pockets and a padded laptop compartment', 'Lightweight design with an elegant bow detail'], edition: 'Everyday Edition' },
 ]
 const categories = ['Everything', 'Sport Sets', 'Sport Bags']
 const formatPrice = (amount: number | null) => amount === null ? 'Coming soon' : `${amount} TND`
