@@ -61,6 +61,12 @@ export default function Home() {
     const data = new FormData(event.currentTarget)
     const items = cart.map(({ product, quantity }) => `${product.name} x${quantity} — ${formatPrice(product.price === null ? null : product.price * quantity)}`).join('\n')
     const body = `New THAT GIRL order\n\n${items}\n\nTotal: ${formatPrice(total)}\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nPhone: ${data.get('phone')}\nDelivery address: ${data.get('address')}\n\nNote: ${data.get('note') || '—'}`
+    void fetch('/api/order-notification', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: String(data.get('name') || '').trim() }),
+      keepalive: true,
+    }).catch(() => undefined)
     window.location.href = `mailto:that_girl2026@outlook.fr?subject=${encodeURIComponent('THAT GIRL order request')}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
@@ -93,7 +99,7 @@ export default function Home() {
       <section className="story-section" id="story"><div className="story-image"><img src="/images/story-concept.png" alt="Curated blush activewear, bow tote, yoga mat, water bottle, and accessories arranged in a sunlit studio" loading="lazy" /><div className="story-photo-caption"><span>THAT GIRL · OUR STORY</span><strong>Everyday, elevated.</strong></div></div><div className="story-copy"><span className="eyebrow">A NOTE FROM THAT GIRL</span><h2>A little more<br /><em>you.</em> Every day.</h2><p>A good outfit can change the way a day begins. We bring together easy-to-love pieces for wherever yours takes you — from your first coffee to those last-minute plans. Wear what feels like you, and let the rest follow.</p><div className="story-values"><span>Feel-good finds</span><span>Everyday favorites</span><span>Your kind of iconic</span></div><a href="#shop" className="text-link">Meet your new favorites <ArrowRight size={15} /></a><span className="story-signature">Look good. Feel good. ♡</span></div></section>
 
       <section className="newsletter"><span className="eyebrow">A LITTLE NOTE FROM US</span><h2>Good things look<br /><em>good on you.</em></h2><a className="button button-light" href="mailto:haifa.khiari@outlook.fr?subject=THAT%20GIRL%20updates">Say hello <ArrowRight size={16} /></a><span className="newsletter-spark">✳</span></section>
-      <footer className="site-footer"><a href="#top" className="footer-mark">THAT GIRL <span>♡</span></a><span>ACTIVE · LIFESTYLE</span><a href="https://instagram.com/that________giirl" target="_blank" rel="noreferrer" aria-label="Follow THAT GIRL on Instagram">Instagram</a><a href="mailto:haifa.khiari@outlook.fr">Say hello</a><small>© 2026 THAT GIRL. Made with a little extra love.</small></footer>
+      <footer className="site-footer"><a href="#top" className="footer-mark">THAT GIRL <span>♡</span></a><span>ACTIVE · LIFESTYLE</span><a href="https://instagram.com/that________giirl" target="_blank" rel="noreferrer" aria-label="Follow THAT GIRL on Instagram">Instagram</a><a href="mailto:haifa.khiari@outlook.fr">Say hello</a><a href="/notifications">Order alerts</a><small>© 2026 THAT GIRL. Made with a little extra love.</small></footer>
 
       {selectedProduct && <dialog ref={productDialogRef} className="product-dialog" aria-labelledby="product-dialog-title" onCancel={() => setSelectedProduct(null)} onClick={(event) => { if (event.target === event.currentTarget) setSelectedProduct(null) }}><button type="button" className="product-dialog-close icon-button" onClick={() => setSelectedProduct(null)} aria-label="Close product details" autoFocus><X /></button><div className="product-dialog-layout"><div className={`product-dialog-image ${selectedProduct.tone}`}><img src={selectedProduct.image} alt={selectedProduct.name} /></div><div className="product-dialog-copy"><span className="eyebrow">THAT GIRL · {'category' in selectedProduct ? 'FIT EDITION' : selectedProduct.edition.toUpperCase()}</span><h2 id="product-dialog-title">{selectedProduct.name}</h2><p className="product-dialog-price">Price coming soon</p><h3>Product details</h3><ul>{selectedProduct.details.map((detail) => <li key={detail}>{detail}</li>)}</ul><p className="product-dialog-note">We&apos;ll share the price and ordering details soon.</p></div></div></dialog>}
 
