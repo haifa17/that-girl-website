@@ -61,7 +61,7 @@ export default function Home() {
     const data = new FormData(event.currentTarget)
     const items = cart.map(({ product, quantity }) => `${product.name} x${quantity} — ${formatPrice(product.price === null ? null : product.price * quantity)}`).join('\n')
     const body = `New THAT GIRL order\n\n${items}\n\nTotal: ${formatPrice(total)}\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nPhone: ${data.get('phone')}\nDelivery address: ${data.get('address')}\n\nNote: ${data.get('note') || '—'}`
-    window.location.href = `mailto:haifa.khiari@outlook.fr?subject=${encodeURIComponent('THAT GIRL order request')}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:that_girl2026@outlook.fr?subject=${encodeURIComponent('THAT GIRL order request')}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
 
