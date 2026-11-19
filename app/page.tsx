@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="announcement">A little love, a lot of confidence. Free delivery on orders over 100 TND <span>♡</span></div>
+      <div className="announcement">A little love, a lot of confidence. Free delivery from 99 DT <span>♡</span></div>
       <header className="site-header">
         <button className="mobile-menu icon-button" aria-label="Open menu" onClick={() => setMobileOpen(!mobileOpen)}><Menu /></button>
         <a href="#top" className="wordmark" aria-label="THAT GIRL home"><span className="wordmark-bow">୨୧</span>THAT GIRL<small>ACTIVE · LIFESTYLE</small></a>
