@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'THAT GIRL — Active · Lifestyle',
-  description: 'Shop THAT GIRL activewear and Everyday Totes in mauve and cream, now at a special opening price of 29.900 TND.',
+  description: 'Shop THAT GIRL activewear, Everyday Totes, and satin pillowcases for a softer-feeling bedtime routine.',
   generator: 'v0.app',
   icons: {
     icon: [
