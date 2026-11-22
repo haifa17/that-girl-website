@@ -182,6 +182,16 @@ h1, h2, h3, p { margin-top: 0; }
 .push-form label { color: #654b46; font-size: 12px; font-weight: 600; }
 .push-form input { width: 100%; min-height: 46px; border: 1px solid #e5d5cf; border-radius: 0; outline: none; background: #fffdfb; padding: 10px 12px; color: #503b38; }
 .push-form input:focus { border-color: #b78583; box-shadow: 0 0 0 2px #b7858325; }
+.satin-section .section-heading { justify-content: center; text-align: center; }
+.satin-section .section-heading > div { max-width: 760px; }
+.satin-section .collection-intro { max-width: 650px; margin-inline: auto; line-height: 1.8; }
+.satin-offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 1080px; margin: 0 auto; }
+.satin-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1080px; margin: 24px auto 0; }
+.satin-image-card { margin: 0; overflow: hidden; border: 1px solid #eadbd6; background: #f8eee9; }
+.satin-image-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
+.satin-image-card figcaption { padding: 15px 12px; color: #654b46; text-align: center; font: 500 15px 'Playfair Display', Georgia, serif; }
+@media (max-width: 800px) { .satin-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .satin-info-grid .satin-image-card:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; } }
+@media (max-width: 560px) { .satin-offer-grid, .satin-info-grid { grid-template-columns: 1fr; gap: 16px; } .satin-info-grid .satin-image-card:last-child { grid-column: auto; width: 100%; justify-self: stretch; } }
 .push-form .button { margin-top: 8px; }
 .push-form .button:disabled, .push-actions .button:disabled, .push-text-button:disabled { cursor: wait; opacity: .65; }
 .push-action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
