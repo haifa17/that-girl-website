@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'THAT GIRL — Active · Lifestyle',
-  description: 'Shop the THAT GIRL Fit Edition: sport sets and sport bags, with vintage work bags coming soon in the Unstoppable Edition.',
+  description: 'Shop THAT GIRL activewear and Everyday Totes in mauve and cream, now at a special opening price of 29.900 TND.',
   generator: 'v0.app',
   icons: {
     icon: [
