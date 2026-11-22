@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'THAT GIRL — Active · Lifestyle',
-  description: 'Shop THAT GIRL activewear, Everyday Totes, and satin pillowcases for a softer-feeling bedtime routine.',
+  description: 'Shop THAT GIRL sculpt and wrap activewear, plus satin pillowcases for your hair and skin.',
   generator: 'v0.app',
   icons: {
     icon: [
