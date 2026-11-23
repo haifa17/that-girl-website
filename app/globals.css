@@ -90,7 +90,7 @@ h1, h2, h3, p { margin-top: 0; }
 .product-image.blush img { object-position: 50% 43%; }
 .product-image.rose img { object-position: 50% 31%; }
 .product-image.cream img { object-position: 50% 23%; }
-.product-image.mauve img { object-position: 50% 40%; }
+.product-image.mauve img, .product-image.green img { object-position: 50% 40%; }
 .product-tag { position: absolute; top: 12px; left: 12px; padding: 7px 10px; background: #fffaf7; color: #775351; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
 .quick-add, .favorite { position: absolute; display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(255,250,247,.94); cursor: pointer; transition: background .2s, transform .2s; }
 .quick-add { right: 12px; bottom: 12px; }
