@@ -221,8 +221,31 @@ h1, h2, h3, p { margin-top: 0; }
 .satin-image-card { margin: 0; overflow: hidden; border: 1px solid #eadbd6; background: #f8eee9; }
 .satin-image-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
 .satin-image-card figcaption { padding: 15px 12px; color: #654b46; text-align: center; font: 500 15px 'Playfair Display', Georgia, serif; }
-@media (max-width: 800px) { .satin-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .satin-info-grid .satin-image-card:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; } }
-@media (max-width: 560px) { .satin-offer-grid, .satin-info-grid { grid-template-columns: 1fr; gap: 16px; } .satin-info-grid .satin-image-card:last-child { grid-column: auto; width: 100%; justify-self: stretch; } }
+.satin-customizer { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 34px auto 0; align-items: stretch; }
+.satin-customizer-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.satin-customizer-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border: 1px solid #eadbd6; background: #f8eee9; }
+.satin-customizer-panel { display: flex; flex-direction: column; justify-content: center; gap: 17px; padding: clamp(20px, 3vw, 34px); border: 1px solid #eadbd6; background: #fffaf7; }
+.satin-customizer-panel h3 { margin: 0; color: #503633; font: 500 clamp(23px, 2.4vw, 32px)/1.15 'Playfair Display', Georgia, serif; }
+.satin-customizer-panel > .eyebrow { margin-bottom: -12px; }
+.satin-customizer-price { color: #503633; font-size: 17px; font-weight: 700; }
+.satin-customizer-panel fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.satin-customizer-panel legend { margin-bottom: 9px; color: #654b46; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.satin-color-options { display: flex; flex-wrap: wrap; gap: 9px; }
+.satin-color-option { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 7px 11px; border: 1px solid #e5d5cf; color: #654b46; font-size: 11px; cursor: pointer; }
+.satin-color-option:has(input:checked) { border-color: #8b3d54; box-shadow: 0 0 0 1px #8b3d54; }
+.satin-color-option input { accent-color: #8b3d54; }
+.satin-color-swatch { width: 15px; height: 15px; border-radius: 50%; border: 1px solid #d5c1bc; }
+.satin-color-swatch.burgundy { background: #8b1238; }
+.satin-color-swatch.blush { background: #efd1d2; }
+.satin-customizer-panel > label, .satin-dimension-fields label { display: flex; flex-direction: column; gap: 6px; color: #654b46; font-size: 10px; font-weight: 600; }
+.satin-customizer-panel input[type='text'], .satin-customizer-panel input[type='number'] { width: 100%; min-height: 40px; border: 1px solid #e5d5cf; outline: none; background: #fffdfb; padding: 9px 11px; color: #503b38; font: inherit; }
+.satin-customizer-panel input[type='text']::placeholder { color: #a08e88; font-weight: 400; }
+.satin-customizer-panel input:focus { border-color: #b78583; box-shadow: 0 0 0 2px #b7858325; }
+.satin-dimension-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.satin-customizer-panel .button:disabled { cursor: not-allowed; opacity: .55; }
+.satin-customizer-panel .button { width: 100%; }
+@media (max-width: 800px) { .satin-customizer { grid-template-columns: 1fr; } .satin-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .satin-info-grid .satin-image-card:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; } }
+@media (max-width: 560px) { .satin-offer-grid, .satin-info-grid { grid-template-columns: 1fr; gap: 16px; } .satin-customizer { margin-top: 24px; } .satin-customizer-gallery { gap: 8px; } .satin-customizer-panel { padding: 22px 18px; } .satin-info-grid .satin-image-card:last-child { grid-column: auto; width: 100%; justify-self: stretch; } }
 .push-form .button { margin-top: 8px; }
 .push-form .button:disabled, .push-actions .button:disabled, .push-text-button:disabled { cursor: wait; opacity: .65; }
 .push-action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
