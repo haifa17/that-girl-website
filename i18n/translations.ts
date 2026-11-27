@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     // header / nav
-    announcement: 'A little love, a lot of confidence. Free delivery from 99 DT', openMenu: 'Open menu', closeMenu: 'Close menu', mainNavigation: 'Main navigation',
+    announcement: 'A little love, a lot of confidence.', openMenu: 'Open menu', closeMenu: 'Close menu', mainNavigation: 'Main navigation',
     shopAll: 'Shop all', cocoSet: 'Coco set', fitSet: 'Fit set', eloraSet: 'Elora set', leggings: 'Leggings', satinPillowcases: 'Satin pillowcases', satinAccessories: 'Satin accessories', ourStory: 'Our story', bag: 'Bag',
     openBag: (count: number) => `Open shopping bag, ${count} items`, switchLanguage: 'Current language: English. Switch to French',
     // hero / images
@@ -34,7 +34,7 @@ export const translations = {
     orderEmailIntro: 'New THAT GIRL order', orderTotal: 'Total', note: 'Note', comingSoon: 'Coming soon',
   },
   fr: {
-    announcement: 'Un peu d’amour, beaucoup de confiance. Livraison gratuite dès 99 DT', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu', mainNavigation: 'Navigation principale',
+    announcement: 'Un peu d’amour, beaucoup de confiance.', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu', mainNavigation: 'Navigation principale',
     shopAll: 'Tout voir', cocoSet: 'Ensemble Coco', fitSet: 'Ensemble Fit', eloraSet: 'Ensemble Elora', leggings: 'Legging', satinPillowcases: 'Taies d’oreiller en satin', satinAccessories: 'Accessoires en satin', ourStory: 'Notre histoire', bag: 'Panier',
     openBag: (count: number) => `Ouvrir le panier, ${count} article(s)`, switchLanguage: 'Langue actuelle : français. Passer en anglais',
     heroLink: 'Découvrir la collection THAT GIRL', heroAlt: 'Collection activewear THAT GIRL dans une boutique rose poudré, avec des vêtements, sacs et accessoires, et le message « Soyez belle. Sentez-vous bien. »',
