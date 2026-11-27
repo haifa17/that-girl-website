@@ -4,13 +4,13 @@ import { ShopProvider } from '@/components/shop-provider'
 import { ShopSection } from '@/components/shop-section'
 import { SatinCustomizer } from '@/components/satin-customizer'
 import { SiteHeader } from '@/components/site-header'
-import { Footer, Hero, Newsletter, PromiseStrip, SatinGallery, SatinInfo, Story } from '@/components/static-sections'
+import { Footer, Hero, Newsletter, PromiseStrip, SatinAccessories, SatinGallery, SatinInfo, Story } from '@/components/static-sections'
 import { getLocale } from '@/lib/locale.server'
 import { translations } from '@/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'THAT GIRL · Active Lifestyle',
-  description: 'Coco, Elora and Fit sets, plus custom satin pillowcases.',
+  description: 'Coco, Elora and Fit sets, plus custom satin pillowcases and sleep masks.',
 }
 
 // Server Component: reads the language cookie and renders every static section on the server.
@@ -35,6 +35,7 @@ export default async function Page() {
             <p className="collection-intro">{t.satinIntro}</p>
           </div></div>
           <SatinGallery t={t} locale={locale} />
+          <SatinAccessories t={t} />
           <SatinCustomizer />
           <SatinInfo t={t} />
         </section>

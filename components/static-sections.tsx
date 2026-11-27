@@ -1,7 +1,9 @@
 // Server components: no 'use client', no hooks, no event handlers. `t` is passed from app/page.tsx.
 import { ArrowRight } from 'lucide-react'
 import { formatPrice, Locale, ORDER_EMAIL, SATIN_PRICE } from '@/lib/shop'
+import { satinEyeMask } from '@/data/products'
 import Link from 'next/link'
+import { ProductCard } from './product-card'
 
 type T = Record<string, any>
 
@@ -46,6 +48,17 @@ export function SatinGallery({ t, locale }: { t: T; locale: Locale }) {
             </div>
             {/* <SatinCustomizer /> is rendered between these two blocks by app/page.tsx */}
         </>
+    )
+}
+
+export function SatinAccessories({ t }: { t: T }) {
+    return (
+        <div className="satin-accessories-feature">
+            <h3 className="satin-accessories-title">{t.satinAccessoriesTitle}</h3>
+            <div className="satin-accessory-grid">
+                <ProductCard product={satinEyeMask} />
+            </div>
+        </div>
     )
 }
 

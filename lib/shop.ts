@@ -1,6 +1,6 @@
 export type Locale = 'en' | 'fr'
-export type Category = 'Coco Set' | 'Elora Set' | 'Fit Set' | 'Leggings' | 'Satin Pillowcases'
-export type Filter = 'Everything' | Exclude<Category, 'Satin Pillowcases'>
+export type Category = 'Coco Set' | 'Elora Set' | 'Fit Set' | 'Leggings' | 'Satin Pillowcases' | 'Satin Accessories'
+export type Filter = 'Everything' | Exclude<Category, 'Satin Pillowcases' | 'Satin Accessories'>
 
 export const FILTERS: readonly Filter[] = ['Everything', 'Coco Set', 'Elora Set', 'Fit Set', 'Leggings']
 export const SIZES = ['S', 'M', 'L'] as const
@@ -12,6 +12,7 @@ export type Product = {
     nameFr: string
     category: Category
     price: number | null
+    hasSizeOptions?: boolean
     image: string
     gallery?: string[]
     tag?: string
@@ -102,6 +103,7 @@ export const CATEGORY_KEY = {
     'Fit Set': 'fitSet',
     Leggings: 'leggings',
     'Satin Pillowcases': 'satinPillowcases',
+    'Satin Accessories': 'satinAccessories',
 } as const satisfies Record<Category, string>
 
 export const LOCALE_COOKIE = 'locale'

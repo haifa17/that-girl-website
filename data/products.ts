@@ -87,6 +87,19 @@ export const satinPillowcase: Product = {
     detailsFr: [],
 }
 
+export const satinEyeMask: Product = {
+    id: 21,
+    name: 'THAT GIRL Satin Sleep Mask · Blush',
+    nameFr: 'Masque de nuit en satin THAT GIRL · Rose poudré',
+    category: 'Satin Accessories',
+    price: 22,
+    tone: 'mauve',
+    hasSizeOptions: false,
+    image: img('pink%20satin%20batch-WFACuxJVBP48hniQDMfO3ZiwBu2dc7.jpeg'),
+    details: ['Soft satin sleep mask with an elastic band', 'Color: Blush pink'],
+    detailsFr: ['Masque de nuit doux en satin avec bande élastique', 'Couleur : rose poudré'],
+}
+
 if (process.env.NODE_ENV === 'development') {
     for (const p of products) {
         if (!p.gallery?.length) console.warn(`[products] #${p.id} "${p.name}" has only 1 photo — add the 2nd way of wearing it to \`gallery\`.`)

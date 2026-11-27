@@ -11,7 +11,7 @@ type Props = {
     t: Record<string, any>
     offerExpired: boolean
     onClose: () => void
-    onAdd: (product: Product, size: Size) => void
+    onAdd: (product: Product, size: Size | null) => void
 }
 
 /** Mount with `key={product.id}` so size/image state resets per product. */
@@ -22,11 +22,14 @@ export function ProductDialog({ product, locale, t, offerExpired, onClose, onAdd
     const fr = locale === 'fr'
     const name = fr ? product.nameFr : product.name
     const specs = fr ? fitEditionSpecificationsFr : fitEditionSpecifications
+    const hasSizeOptions = product.hasSizeOptions !== false
+    const eyebrow = product.category === 'Satin Accessories'
+        ? `THAT GIRL · ${t.satinAccessories.toUpperCase()}`
+        : 'THAT GIRL · FIT EDITION'
 
     useEffect(() => {
         const dialog = ref.current
         if (dialog && !dialog.open) dialog.showModal()
-        return () => dialog?.close()
     }, [])
 
     return (
@@ -41,30 +44,34 @@ export function ProductDialog({ product, locale, t, offerExpired, onClose, onAdd
             <div className="product-dialog-layout">
                 <div className={`product-dialog-image ${product.tone}`}><img src={image} alt={name} /></div>
                 <div className="product-dialog-copy">
-                    <span className="eyebrow">THAT GIRL · FIT EDITION</span>
+                    <span className="eyebrow">{eyebrow}</span>
                     <h2 id="product-dialog-title">{name}</h2>
                     <p className="product-dialog-price">
-                        {offerExpired ? t.regularPrice : t.openingSpecial} · {formatPrice(unitPrice(product, offerExpired), locale, t.comingSoon)}
+                        {product.tag && !offerExpired ? t.openingSpecial : t.regularPrice} · {formatPrice(unitPrice(product, offerExpired), locale, t.comingSoon)}
                     </p>
-                    <details className="product-extra-details">
+                    <details className="product-extra-details" open={!hasSizeOptions}>
                         <summary>{t.productDetails}</summary>
                         <ul>{(fr ? product.detailsFr : product.details).map((d) => <li key={d}>{d}</li>)}</ul>
                     </details>
                     <div className="product-purchase">
-                        <div className="product-specifications">
-                            <h3>{t.specifications}</h3>
-                            <ul>{specs.map((s) => <li key={s}>{s}</li>)}</ul>
-                        </div>
-                        <fieldset className="size-picker">
-                            <legend>{t.chooseSize}</legend>
-                            {SIZES.map((s) => (
-                                <label className="size-option" key={s}>
-                                    <input type="radio" name="size" value={s} checked={size === s} onChange={() => setSize(s)} />
-                                    <span>{s}</span>
-                                </label>
-                            ))}
-                        </fieldset>
-                        <button type="button" className="button button-dark product-add-button" disabled={!size} onClick={() => size && onAdd(product, size)}>
+                        {hasSizeOptions && (
+                            <div className="product-specifications">
+                                <h3>{t.specifications}</h3>
+                                <ul>{specs.map((s) => <li key={s}>{s}</li>)}</ul>
+                            </div>
+                        )}
+                        {hasSizeOptions && (
+                            <fieldset className="size-picker">
+                                <legend>{t.chooseSize}</legend>
+                                {SIZES.map((s) => (
+                                    <label className="size-option" key={s}>
+                                        <input type="radio" name="size" value={s} checked={size === s} onChange={() => setSize(s)} />
+                                        <span>{s}</span>
+                                    </label>
+                                ))}
+                            </fieldset>
+                        )}
+                        <button type="button" className="button button-dark product-add-button" disabled={hasSizeOptions && !size} onClick={() => hasSizeOptions ? size && onAdd(product, size) : onAdd(product, null)}>
                             {t.addToBag} <ShoppingBag size={16} />
                         </button>
                     </div>
