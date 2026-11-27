@@ -2,7 +2,7 @@ export const translations = {
   en: {
     // header / nav
     announcement: 'A little love, a lot of confidence. Free delivery from 99 DT', openMenu: 'Open menu', closeMenu: 'Close menu', mainNavigation: 'Main navigation',
-    shopAll: 'Shop all', cocoSet: 'Coco set', fitSet: 'Fit set', eloraSet: 'Elora set', satinPillowcases: 'Satin pillowcases', ourStory: 'Our story', bag: 'Bag',
+    shopAll: 'Shop all', cocoSet: 'Coco set', fitSet: 'Fit set', eloraSet: 'Elora set', leggings: 'Leggings', satinPillowcases: 'Satin pillowcases', ourStory: 'Our story', bag: 'Bag',
     openBag: (count: number) => `Open shopping bag, ${count} items`, switchLanguage: 'Current language: English. Switch to French',
     // hero / images
     heroLink: 'Discover the THAT GIRL collection', heroAlt: 'THAT GIRL active lifestyle collection in a blush pink boutique, featuring apparel, bags, accessories, and the message “Look good. Feel good.”',
@@ -35,7 +35,7 @@ export const translations = {
   },
   fr: {
     announcement: 'Un peu d’amour, beaucoup de confiance. Livraison gratuite dès 99 DT', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu', mainNavigation: 'Navigation principale',
-    shopAll: 'Tout voir', cocoSet: 'Ensemble Coco', fitSet: 'Ensemble Fit', eloraSet: 'Ensemble Elora', satinPillowcases: 'Taies d’oreiller en satin', ourStory: 'Notre histoire', bag: 'Panier',
+    shopAll: 'Tout voir', cocoSet: 'Ensemble Coco', fitSet: 'Ensemble Fit', eloraSet: 'Ensemble Elora', leggings: 'Legging', satinPillowcases: 'Taies d’oreiller en satin', ourStory: 'Notre histoire', bag: 'Panier',
     openBag: (count: number) => `Ouvrir le panier, ${count} article(s)`, switchLanguage: 'Langue actuelle : français. Passer en anglais',
     heroLink: 'Découvrir la collection THAT GIRL', heroAlt: 'Collection activewear THAT GIRL dans une boutique rose poudré, avec des vêtements, sacs et accessoires, et le message « Soyez belle. Sentez-vous bien. »',
     satinPromoAlt: 'Visuel promotionnel présentant des taies en satin champagne et rose', satinChampagneAlt: 'Visuel promotionnel présentant une taie en satin champagne',

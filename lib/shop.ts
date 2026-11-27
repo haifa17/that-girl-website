@@ -1,8 +1,8 @@
 export type Locale = 'en' | 'fr'
-export type Category = 'Coco Set' | 'Elora Set' | 'Fit Set' | 'Satin Pillowcases'
+export type Category = 'Coco Set' | 'Elora Set' | 'Fit Set' | 'Leggings' | 'Satin Pillowcases'
 export type Filter = 'Everything' | Exclude<Category, 'Satin Pillowcases'>
 
-export const FILTERS: readonly Filter[] = ['Everything', 'Coco Set', 'Elora Set', 'Fit Set']
+export const FILTERS: readonly Filter[] = ['Everything', 'Coco Set', 'Elora Set', 'Fit Set', 'Leggings']
 export const SIZES = ['S', 'M', 'L'] as const
 export type Size = (typeof SIZES)[number]
 
@@ -43,7 +43,8 @@ export function parseDimension(value: string): number | null {
 
 export function unitPrice(product: Product, offerExpired: boolean): number | null {
     if (product.price === null) return null
-    const surcharge = offerExpired && product.category !== 'Satin Pillowcases' ? EXPIRED_OFFER_SURCHARGE : 0
+    const isSportSet = product.category === 'Coco Set' || product.category === 'Elora Set' || product.category === 'Fit Set'
+    const surcharge = offerExpired && isSportSet ? EXPIRED_OFFER_SURCHARGE : 0
     return product.price + surcharge
 }
 
@@ -99,6 +100,7 @@ export const CATEGORY_KEY = {
     'Coco Set': 'cocoSet',
     'Elora Set': 'eloraSet',
     'Fit Set': 'fitSet',
+    Leggings: 'leggings',
     'Satin Pillowcases': 'satinPillowcases',
 } as const satisfies Record<Category, string>
 
