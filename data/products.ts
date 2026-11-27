@@ -50,8 +50,8 @@ export const products: Product[] = [
         details: [...ELORA, 'Color: Mauve'], detailsFr: [...ELORA_FR, 'Couleur : mauve'],
     },
     {
-        id: 12, name: 'The Fit Set · Black', nameFr: 'Ensemble Fit · Noir', category: 'Fit Set', price: 69.9, tag: 'Opening special', tone: 'cream',
-        image: img('WhatsApp%20Image%202026-11-26%20at%201.17.00%20PM9-aAWMhb2cWzLdcKGNyDulycJi7uggyM.jpeg'),
+        id: 12, name: 'Bella Flare Set · Black', nameFr: 'Ensemble Bella Flare · Noir', category: 'Fit Set', price: 69.9, tag: 'Opening special', tone: 'cream',
+        image: img('bella-flare-black-J1fob0JcwA0P59GAIIDjvMa79xS9sh.jpeg'),
         gallery: [img('WhatsApp%20Image%202026-11-26%20at%201.17.00%20PM-710JrHd0Cc947VpswzxlMIWp5aqDjr.jpeg')],
         details: ['Matching long-sleeve cutout-shoulder crop top and flared leggings', 'Soft, stretchy premium fabric with a non-sheer finish', 'Color: Black'],
         detailsFr: ['Haut court à manches longues et épaules ajourées, assorti à un legging évasé', 'Tissu premium doux, extensible et non transparent', 'Couleur : noir'],
