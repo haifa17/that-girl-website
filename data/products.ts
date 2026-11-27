@@ -36,12 +36,12 @@ export const products: Product[] = [
     },
     {
         id: 6, name: 'The Elora Wrap Set · Burgundy', nameFr: 'Ensemble cache-cœur Elora · Bordeaux', category: 'Elora Set', price: 69.9, tag: 'Opening special', tone: 'rose',
-        image: img('WhatsApp%20Image%202026-11-24%20at%209.45.47%20PM-DB29c7K6OyY3EAxydbwOpTjL0GCHNk.jpeg'),
+        image: img('elora-burgundy-CnSzBfNFzegu3iA0afn7xvb8wN6U96.jpeg'),
         details: [...ELORA, 'Color: Burgundy'], detailsFr: [...ELORA_FR, 'Couleur : bordeaux'],
     },
     {
         id: 7, name: 'The Elora Wrap Set · Black', nameFr: 'Ensemble cache-cœur Elora · Noir', category: 'Elora Set', price: 69.9, tag: 'Opening special', tone: 'cream',
-        image: img('WhatsApp%20Image%202026-11-24%20at%209.45.48%20PM56-khhjAIcT8hF66b08FSutSWPqjp3yZv.jpeg'),
+        image: img('elora-black-rj9MHOmjqEnmHGAsOIKUaTz3IeOxkp.jpeg'),
         details: [...ELORA, 'Color: Black'], detailsFr: [...ELORA_FR, 'Couleur : noir'],
     },
     {
@@ -51,7 +51,7 @@ export const products: Product[] = [
     },
     {
         id: 9, name: 'The Elora Wrap Set · Mauve', nameFr: 'Ensemble cache-cœur Elora · Mauve', category: 'Elora Set', price: 69.9, tag: 'Opening special', tone: 'mauve',
-        image: img('WhatsApp%20Image%202026-11-24%20at%209.45.48%20PM99-BLK9NVSurRRVgoOuPGvIz0EteP5Q8F.jpeg'),
+        image: img('elora-pink-zaZobikaNMUdvbFjLGs3hAuiNC0eTi.jpeg'),
         details: [...ELORA, 'Color: Mauve'], detailsFr: [...ELORA_FR, 'Couleur : mauve'],
     },
     {
