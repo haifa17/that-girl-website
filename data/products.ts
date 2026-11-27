@@ -45,11 +45,6 @@ export const products: Product[] = [
         details: [...ELORA, 'Color: Black'], detailsFr: [...ELORA_FR, 'Couleur : noir'],
     },
     {
-        id: 8, name: 'The Elora Wrap Set · Sage Green', nameFr: 'Ensemble cache-cœur Elora · Vert sauge', category: 'Elora Set', price: 69.9, tag: 'Opening special', tone: 'green',
-        image: img('WhatsApp%20Image%202026-11-24%20at%209.45.48%20PM86543-camU7sHNNFoeKFE8SYEywETwDSAYxm.jpeg'),
-        details: [...ELORA, 'Color: Sage green'], detailsFr: [...ELORA_FR, 'Couleur : vert sauge'],
-    },
-    {
         id: 9, name: 'The Elora Wrap Set · Mauve', nameFr: 'Ensemble cache-cœur Elora · Mauve', category: 'Elora Set', price: 69.9, tag: 'Opening special', tone: 'mauve',
         image: img('elora-pink-zaZobikaNMUdvbFjLGs3hAuiNC0eTi.jpeg'),
         details: [...ELORA, 'Color: Mauve'], detailsFr: [...ELORA_FR, 'Couleur : mauve'],
