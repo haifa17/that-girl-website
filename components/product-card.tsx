@@ -12,12 +12,13 @@ export function ProductCard({ product }: { product: Product }) {
   const images = productImages(product)
   const fr = locale === 'fr'
   const name = fr ? product.nameFr : product.name
+  const hasSizeOptions = product.hasSizeOptions !== false
   const open = () => selectProduct(product)
   const openLabel = `${fr ? 'Voir les détails de' : 'View details for'} ${name}`
 
   function handleAdd() {
-    if (!size) return
-    addToCart(product, size)
+    if (hasSizeOptions && !size) return
+    addToCart(product, hasSizeOptions ? size : null)
     setSize(null) // ready for the next add
   }
 
@@ -54,17 +55,19 @@ export function ProductCard({ product }: { product: Product }) {
       </button>
 
       <div className="card-purchase">
-        <fieldset className="card-sizes">
-          <legend className="visually-hidden">{t.chooseSize}</legend>
-          {SIZES.map((s) => (
-            <label className="card-size-option" key={s}>
-              <input type="radio" name={`card-size-${product.id}`} value={s} checked={size === s} onChange={() => setSize(s)} />
-              <span>{s}</span>
-            </label>
-          ))}
-        </fieldset>
-        <button type="button" className="button button-dark card-add-button" disabled={!size} onClick={handleAdd}>
-           <ShoppingCart size={20} />
+        {hasSizeOptions ? (
+          <fieldset className="card-sizes">
+            <legend className="visually-hidden">{t.chooseSize}</legend>
+            {SIZES.map((s) => (
+              <label className="card-size-option" key={s}>
+                <input type="radio" name={`card-size-${product.id}`} value={s} checked={size === s} onChange={() => setSize(s)} />
+                <span>{s}</span>
+              </label>
+            ))}
+          </fieldset>
+        ) : <span className="card-one-size">{t.oneSize}</span>}
+        <button type="button" className="button button-dark card-add-button" disabled={hasSizeOptions && !size} onClick={handleAdd} aria-label={`${t.addToBag}: ${name}`}>
+          <ShoppingCart size={20} />
         </button>
       </div>
     </article>

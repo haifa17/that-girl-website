@@ -2,7 +2,7 @@ export const translations = {
   en: {
     // header / nav
     announcement: 'A little love, a lot of confidence. Free delivery from 99 DT', openMenu: 'Open menu', closeMenu: 'Close menu', mainNavigation: 'Main navigation',
-    shopAll: 'Shop all', cocoSet: 'Coco set', fitSet: 'Fit set', eloraSet: 'Elora set', leggings: 'Leggings', satinPillowcases: 'Satin pillowcases', ourStory: 'Our story', bag: 'Bag',
+    shopAll: 'Shop all', cocoSet: 'Coco set', fitSet: 'Fit set', eloraSet: 'Elora set', leggings: 'Leggings', satinPillowcases: 'Satin pillowcases', satinAccessories: 'Satin accessories', ourStory: 'Our story', bag: 'Bag',
     openBag: (count: number) => `Open shopping bag, ${count} items`, switchLanguage: 'Current language: English. Switch to French',
     // hero / images
     heroLink: 'Discover the THAT GIRL collection', heroAlt: 'THAT GIRL active lifestyle collection in a blush pink boutique, featuring apparel, bags, accessories, and the message “Look good. Feel good.”',
@@ -14,7 +14,7 @@ export const translations = {
     introExpired: 'Sculpt and wrap sets are now 79.900 DT.', introOpening: 'New sculpt and wrap sets at the opening price of 69.900 DT.', discoverSatin: 'Discover satin pillowcases',
     filterLabel: 'Filter Fit Edition products', everything: 'Everything', productCount: (count: number) => `${count} Fit Edition pieces`, openingSpecial: 'Opening special',
     // satin
-    satinTitle: 'A little luxury,', satinTitleEmphasis: 'every night.', satinIntro: 'Meet the THAT GIRL satin pillowcase in luminous champagne and soft rose. Choose your favorite look, then explore the benefits for your hair and skin.',
+    satinTitle: 'A little luxury,', satinTitleEmphasis: 'every night.', satinIntro: 'Meet the THAT GIRL satin pillowcase in luminous champagne and soft rose. Choose your favorite look, then explore the benefits for your hair and skin.', satinAccessoriesTitle: 'Satin sleep essentials',
     satinOfferOne: 'Soft satin, in your favorite shade.', satinOfferTwo: 'A luminous champagne finish for bedtime.', satinOffersLabel: 'Satin pillowcase offers', satinDetailsLabel: 'Satin pillowcase details',
     satinCustomTitle: 'Make your pillowcase yours', satinColorLabel: 'Choose a color', satinBurgundy: 'Burgundy', satinBlush: 'Blush pink', satinCustomColorLabel: 'Or request another color', satinCustomColorPlaceholder: 'e.g. sage green',
     satinDimensionsLabel: 'Custom dimensions (cm)', satinWidthLabel: 'Width', satinLengthLabel: 'Length', satinBurgundyAlt: 'THAT GIRL satin pillowcase in deep burgundy', satinBlushAlt: 'THAT GIRL satin pillowcase in soft blush pink',
@@ -26,7 +26,7 @@ export const translations = {
     valueOne: 'Feel-good finds', valueTwo: 'Everyday favorites', valueThree: 'Your kind of iconic', storyLink: 'Meet your new favorites', storySignature: 'Look good. Feel good. ♡',
     newsletterLabel: 'A LITTLE NOTE FROM US', newsletterTitle: 'Good things look', newsletterTitleEnd: 'good on you.', followInstagram: 'Follow THAT GIRL on Instagram', sayHello: 'Say hello', copyright: '© 2026 THAT GIRL. Made with a little extra love.',
     // product dialog / cart
-    closeProduct: 'Close product details', regularPrice: 'Regular price', productDetails: 'Product details', specifications: 'Specifications', chooseSize: 'Choose your size', addToBag: 'Add to bag',
+    closeProduct: 'Close product details', regularPrice: 'Regular price', productDetails: 'Product details', specifications: 'Specifications', chooseSize: 'Choose your size', oneSize: 'One size', addToBag: 'Add to bag',
     morePhotos: (name: string) => `More photos of ${name}`, yourFinds: 'YOUR LITTLE FINDS', yourBag: 'Your bag', closeBag: 'Close bag', emptyBagLine1: 'Your bag is waiting', emptyBagLine2: 'for something lovely.',
     keepExploring: 'Keep exploring', sizeLabel: (size: string) => `Size: ${size}`, removeProduct: (name: string) => `Remove one ${name}`, addProduct: (name: string) => `Add one ${name}`, subtotal: 'Subtotal',
     deliveryNote: 'Delivery details will be confirmed with you by email.', yourName: 'Your name', email: 'Email address', phone: 'Phone number', address: 'Delivery address', anythingElse: 'Anything else?', optional: '(optional)',
@@ -35,7 +35,7 @@ export const translations = {
   },
   fr: {
     announcement: 'Un peu d’amour, beaucoup de confiance. Livraison gratuite dès 99 DT', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu', mainNavigation: 'Navigation principale',
-    shopAll: 'Tout voir', cocoSet: 'Ensemble Coco', fitSet: 'Ensemble Fit', eloraSet: 'Ensemble Elora', leggings: 'Legging', satinPillowcases: 'Taies d’oreiller en satin', ourStory: 'Notre histoire', bag: 'Panier',
+    shopAll: 'Tout voir', cocoSet: 'Ensemble Coco', fitSet: 'Ensemble Fit', eloraSet: 'Ensemble Elora', leggings: 'Legging', satinPillowcases: 'Taies d’oreiller en satin', satinAccessories: 'Accessoires en satin', ourStory: 'Notre histoire', bag: 'Panier',
     openBag: (count: number) => `Ouvrir le panier, ${count} article(s)`, switchLanguage: 'Langue actuelle : français. Passer en anglais',
     heroLink: 'Découvrir la collection THAT GIRL', heroAlt: 'Collection activewear THAT GIRL dans une boutique rose poudré, avec des vêtements, sacs et accessoires, et le message « Soyez belle. Sentez-vous bien. »',
     satinPromoAlt: 'Visuel promotionnel présentant des taies en satin champagne et rose', satinChampagneAlt: 'Visuel promotionnel présentant une taie en satin champagne',
@@ -44,7 +44,7 @@ export const translations = {
     promiseOne: '♡ LE BIEN-ÊTRE AVANT TOUT', promiseTwo: 'LE QUOTIDIEN, SUBLIMÉ', promiseThree: 'VOTRE NOUVEAU COUP DE CŒUR', fitTitle: 'Bougez librement,', fitTitleEmphasis: 'soyez vous-même.',
     introExpired: 'Les ensembles sculptants sont maintenant à 79,900 DT.', introOpening: 'Nouveaux ensembles sculptants au prix de lancement de 69,900 DT.', discoverSatin: 'Découvrir les taies en satin',
     filterLabel: 'Filtrer les articles Fit Edition', everything: 'Tout voir', productCount: (count: number) => `${count} articles Fit Edition`, openingSpecial: 'Offre de lancement',
-    satinTitle: 'Un peu de luxe,', satinTitleEmphasis: 'chaque soir.', satinIntro: 'Découvrez la taie en satin THAT GIRL, dans un champagne lumineux ou un rose poudré. Choisissez votre style préféré et découvrez ses bienfaits pour vos cheveux et votre peau.',
+    satinTitle: 'Un peu de luxe,', satinTitleEmphasis: 'chaque soir.', satinIntro: 'Découvrez la taie en satin THAT GIRL, dans un champagne lumineux ou un rose poudré. Choisissez votre style préféré et découvrez ses bienfaits pour vos cheveux et votre peau.', satinAccessoriesTitle: 'Les essentiels de la nuit en satin',
     satinOfferOne: 'Un satin doux dans votre teinte préférée.', satinOfferTwo: 'Un champagne lumineux pour vos soirées.', satinOffersLabel: 'Offres sur les taies en satin', satinDetailsLabel: 'Détails sur les taies en satin',
     satinCustomTitle: 'Créez une taie à votre image', satinColorLabel: 'Choisissez une couleur', satinBurgundy: 'Bordeaux', satinBlush: 'Rose poudré', satinCustomColorLabel: 'Ou demandez une autre couleur', satinCustomColorPlaceholder: 'ex. vert sauge',
     satinDimensionsLabel: 'Dimensions personnalisées (cm)', satinWidthLabel: 'Largeur', satinLengthLabel: 'Longueur', satinBurgundyAlt: 'Taie en satin THAT GIRL bordeaux', satinBlushAlt: 'Taie en satin THAT GIRL rose poudré',
@@ -54,7 +54,7 @@ export const translations = {
     storyBody: 'Une belle tenue peut changer le début d’une journée. Nous réunissons des pièces faciles à aimer, pour vous accompagner partout — du premier café aux sorties improvisées. Portez ce qui vous ressemble et laissez le reste suivre.',
     valueOne: 'Des trouvailles qui font du bien', valueTwo: 'Vos essentiels du quotidien', valueThree: 'Votre style, votre signature', storyLink: 'Découvrez vos nouveaux coups de cœur', storySignature: 'Soyez belle. Sentez-vous bien. ♡',
     newsletterLabel: 'UN PETIT MOT DE NOTRE PART', newsletterTitle: 'Les belles choses vous vont', newsletterTitleEnd: 'si bien.', followInstagram: 'Suivre THAT GIRL sur Instagram', sayHello: 'Nous écrire', copyright: '© 2026 THAT GIRL. Avec beaucoup d’amour.',
-    closeProduct: 'Fermer les détails du produit', regularPrice: 'Prix habituel', productDetails: 'Détails du produit', specifications: 'Spécifications', chooseSize: 'Choisissez votre taille', addToBag: 'Ajouter au panier',
+    closeProduct: 'Fermer les détails du produit', regularPrice: 'Prix habituel', productDetails: 'Détails du produit', specifications: 'Spécifications', chooseSize: 'Choisissez votre taille', oneSize: 'Taille unique', addToBag: 'Ajouter au panier',
     morePhotos: (name: string) => `Autres photos de ${name}`, yourFinds: 'VOS JOLIES TROUVAILLES', yourBag: 'Votre panier', closeBag: 'Fermer le panier', emptyBagLine1: 'Votre panier attend', emptyBagLine2: 'sa prochaine merveille.',
     keepExploring: 'Continuer à découvrir', sizeLabel: (size: string) => `Taille : ${size}`, removeProduct: (name: string) => `Retirer un article : ${name}`, addProduct: (name: string) => `Ajouter un article : ${name}`, subtotal: 'Sous-total',
     deliveryNote: 'Les détails de livraison seront confirmés par e-mail.', yourName: 'Votre nom', email: 'Adresse e-mail', phone: 'Numéro de téléphone', address: 'Adresse de livraison', anythingElse: 'Un message ?', optional: '(facultatif)',

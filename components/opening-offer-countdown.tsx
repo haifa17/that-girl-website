@@ -14,30 +14,29 @@ function getSecondsRemaining() {
 }
 
 export default function OpeningOfferCountdown({ onExpired, locale }: OpeningOfferCountdownProps) {
-  const [secondsRemaining, setSecondsRemaining] = useState(getSecondsRemaining)
+  const [secondsRemaining, setSecondsRemaining] = useState<number | null>(null)
   const isExpired = secondsRemaining === 0
-  const days = Math.floor(secondsRemaining / 86_400)
-  const hours = Math.floor((secondsRemaining % 86_400) / 3_600)
-  const minutes = Math.floor((secondsRemaining % 3_600) / 60)
-  const seconds = secondsRemaining % 60
+  const days = secondsRemaining === null ? '—' : Math.floor(secondsRemaining / 86_400)
+  const hours = secondsRemaining === null ? '--' : String(Math.floor((secondsRemaining % 86_400) / 3_600)).padStart(2, '0')
+  const minutes = secondsRemaining === null ? '--' : String(Math.floor((secondsRemaining % 3_600) / 60)).padStart(2, '0')
+  const seconds = secondsRemaining === null ? '--' : String(secondsRemaining % 60).padStart(2, '0')
 
   useEffect(() => {
-    if (isExpired) {
-      onExpired()
-      return
-    }
+    const initialRemaining = getSecondsRemaining()
+    setSecondsRemaining(initialRemaining)
+    if (initialRemaining === 0) return
 
     const interval = window.setInterval(() => {
       const remaining = getSecondsRemaining()
       setSecondsRemaining(remaining)
-
-      if (remaining === 0) {
-        window.clearInterval(interval)
-        onExpired()
-      }
+      if (remaining === 0) window.clearInterval(interval)
     }, 1000)
 
     return () => window.clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
+    if (isExpired) onExpired()
   }, [isExpired, onExpired])
 
   const copy = locale === 'fr'
