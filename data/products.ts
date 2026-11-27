@@ -56,6 +56,18 @@ export const products: Product[] = [
         details: ['Matching long-sleeve cutout-shoulder crop top and flared leggings', 'Soft, stretchy premium fabric with a non-sheer finish', 'Color: Black'],
         detailsFr: ['Haut court à manches longues et épaules ajourées, assorti à un legging évasé', 'Tissu premium doux, extensible et non transparent', 'Couleur : noir'],
     },
+    {
+        id: 13, name: 'High-Waist Legging · Black', nameFr: 'Legging taille haute · Noir', category: 'Leggings', price: 29.9, tone: 'cream',
+        image: img('legging%20noir-gSIBxNF1AtV71oOspMY8Lk2mS8cw1r.jpeg'),
+        details: ['Ultra-stretchy, lightweight and breathable fabric', 'Opaque, non-sheer finish', 'Premium quality', 'Color: Black'],
+        detailsFr: ['Tissu ultra-extensible, léger et respirant', 'Finition opaque et non transparente', 'Qualité premium', 'Couleur : noir'],
+    },
+    {
+        id: 14, name: 'The Flare Legging · Black', nameFr: 'Legging patte d’éléphant · Noir', category: 'Leggings', price: 29.9, tone: 'cream',
+        image: img('patte-elephant-noir-vZLo3Quy8ofYkSHpaDopLNW3XkTtmN.jpeg'),
+        details: ['High-waisted fit', 'Flared-leg silhouette', 'Soft, stretchy black fabric', 'Color: Black'],
+        detailsFr: ['Coupe taille haute', 'Silhouette à jambes évasées', 'Tissu noir doux et extensible', 'Couleur : noir'],
+    },
 ]
 
 export const fitEditionSpecifications = ['Soft, stretchy fabric with an elastic finish', 'Opaque and non-sheer', 'Premium quality', 'Available sizes: S, M and L']
