@@ -28,16 +28,29 @@ export default async function Page() {
         <PromiseStrip t={t} />
         <ShopSection />
 
-        <section className="shop-section satin-section" id="satin">
-          <div className="section-heading"><div>
+        <section className="shop-section satin-section" id="satin" aria-labelledby="satin-heading">
+          <header className="satin-intro">
             <span className="eyebrow">THAT GIRL · SATIN SLEEP</span>
-            <h2>{t.satinTitle} <em>{t.satinTitleEmphasis}</em></h2>
+            <h2 id="satin-heading">{t.satinTitle} <em>{t.satinTitleEmphasis}</em></h2>
             <p className="collection-intro">{t.satinIntro}</p>
-          </div></div>
-          <SatinGallery t={t} locale={locale} />
-          <SatinAccessories t={t} />
+          </header>
+
+          <section className="satin-offers-block" aria-label={t.satinOffersLabel}>
+            <div className="satin-block-heading"><span className="eyebrow">{t.satinOffersLabel}</span></div>
+            <SatinGallery t={t} locale={locale} />
+          </section>
+
           <SatinCustomizer />
-          <SatinInfo t={t} />
+
+          <section className="satin-details-block" aria-labelledby="satin-details-heading">
+            <header className="satin-block-heading">
+              <span className="eyebrow">{t.satinDetailsLabel}</span>
+              <h3 id="satin-details-heading">{t.satinBenefitsTitle}</h3>
+            </header>
+            <SatinInfo t={t} />
+          </section>
+
+          <SatinAccessories t={t} />
         </section>
 
         <Story t={t} />

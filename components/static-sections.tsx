@@ -53,12 +53,12 @@ export function SatinGallery({ t, locale }: { t: T; locale: Locale }) {
 
 export function SatinAccessories({ t }: { t: T }) {
     return (
-        <div className="satin-accessories-feature">
-            <h3 className="satin-accessories-title">{t.satinAccessoriesTitle}</h3>
+        <section className="satin-accessories-feature" aria-labelledby="satin-accessories-heading">
+            <h3 id="satin-accessories-heading" className="satin-accessories-title">{t.satinAccessoriesTitle}</h3>
             <div className="satin-accessory-grid">
                 <ProductCard product={satinEyeMask} />
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -214,22 +214,26 @@ h1, h2, h3, p { margin-top: 0; }
 .push-form label { color: #654b46; font-size: 12px; font-weight: 600; }
 .push-form input { width: 100%; min-height: 46px; border: 1px solid #e5d5cf; border-radius: 0; outline: none; background: #fffdfb; padding: 10px 12px; color: #503b38; }
 .push-form input:focus { border-color: #b78583; box-shadow: 0 0 0 2px #b7858325; }
-.satin-section .section-heading { justify-content: center; text-align: center; }
-.satin-section .section-heading > div { max-width: 760px; }
- .satin-section .collection-intro { max-width: 650px; margin-inline: auto; line-height: 1.8; }
+.satin-intro { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+.satin-intro h2 { margin: 11px 0 0; color: #503633; font: 500 clamp(36px, 4.4vw, 56px)/1.08 'Playfair Display', Georgia, serif; letter-spacing: -.04em; }
+.satin-intro h2 em { color: #b77f84; font-weight: 500; }
+.satin-section .collection-intro { max-width: 650px; margin: 15px auto 0; line-height: 1.8; }
+.satin-offers-block, .satin-details-block { max-width: 1080px; margin: 0 auto; }
+.satin-block-heading { margin-bottom: 20px; }
+.satin-block-heading h3 { margin: 8px 0 0; color: #503633; font: 500 clamp(25px, 3vw, 36px)/1.12 'Playfair Display', Georgia, serif; letter-spacing: -.025em; }
 .satin-price { display: inline-block; margin: 8px 0 0 6px; padding: 6px 10px; border-radius: 4px; background: #f3e2df; color: #503633; font-size: 17px; font-weight: 700; white-space: nowrap; }
-
-.satin-offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 1080px; margin: 0 auto; }
-.satin-accessories-feature { max-width: 1080px; margin: 44px auto 0; }
+.satin-offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.satin-accessories-feature { max-width: 1080px; margin: 68px auto 0; padding-top: 30px; border-top: 1px solid #eadbd6; }
 .satin-accessories-title { margin: 0 0 18px; color: #503b38; font: 500 clamp(24px, 2.6vw, 32px)/1.2 'Playfair Display', Georgia, serif; }
-.satin-accessory-grid { display: grid; grid-template-columns: minmax(0, 320px); justify-content: center; }
-.satin-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1080px; margin: 24px auto 0; }
+.satin-accessory-grid { display: grid; grid-template-columns: minmax(0, 320px); justify-content: start; }
+.satin-details-block { margin-top: 72px; }
+.satin-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
 .satin-image-card { margin: 0; overflow: hidden; border: 1px solid #eadbd6; background: #f8eee9; }
 .satin-image-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
 .satin-image-card figcaption { padding: 15px 12px; color: #654b46; text-align: center; font: 500 15px 'Playfair Display', Georgia, serif; }
-.satin-customizer { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 34px auto 0; align-items: stretch; }
+.satin-customizer { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 56px auto 0; padding: 22px; align-items: stretch; border: 1px solid #eadbd6; background: #f8eee9; }
 .satin-customizer-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.satin-customizer-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border: 1px solid #eadbd6; background: #f8eee9; }
+.satin-customizer-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border: 1px solid #eadbd6; background: #fffaf7; }
 .satin-customizer-panel { display: flex; flex-direction: column; justify-content: center; gap: 17px; padding: clamp(20px, 3vw, 34px); border: 1px solid #eadbd6; background: #fffaf7; }
 .satin-customizer-panel h3 { margin: 0; color: #503633; font: 500 clamp(23px, 2.4vw, 32px)/1.15 'Playfair Display', Georgia, serif; }
 .satin-customizer-panel > .eyebrow { margin-bottom: -12px; }
@@ -251,7 +255,7 @@ h1, h2, h3, p { margin-top: 0; }
 .satin-customizer-panel .button:disabled { cursor: not-allowed; opacity: .55; }
 .satin-customizer-panel .button { width: 100%; }
 @media (max-width: 800px) { .satin-customizer { grid-template-columns: 1fr; } .satin-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .satin-info-grid .satin-image-card:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; } }
-@media (max-width: 560px) { .satin-offer-grid, .satin-info-grid { grid-template-columns: 1fr; gap: 16px; } .satin-accessories-feature { margin-top: 30px; } .satin-accessory-grid { grid-template-columns: minmax(0, 1fr); } .satin-customizer { margin-top: 24px; } .satin-customizer-gallery { gap: 8px; } .satin-customizer-panel { padding: 22px 18px; } .satin-info-grid .satin-image-card:last-child { grid-column: auto; width: 100%; justify-self: stretch; } }
+@media (max-width: 560px) { .satin-intro { margin-bottom: 40px; } .satin-offer-grid, .satin-info-grid { grid-template-columns: 1fr; gap: 16px; } .satin-accessories-feature { margin-top: 44px; } .satin-accessory-grid { grid-template-columns: minmax(0, 1fr); } .satin-details-block { margin-top: 48px; } .satin-customizer { margin-top: 38px; padding: 12px; gap: 14px; } .satin-customizer-gallery { gap: 8px; } .satin-customizer-panel { padding: 22px 18px; } .satin-info-grid .satin-image-card:last-child { grid-column: auto; width: 100%; justify-self: stretch; } }
 .push-form .button { margin-top: 8px; }
 .push-form .button:disabled, .push-actions .button:disabled, .push-text-button:disabled { cursor: wait; opacity: .65; }
 .push-action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
