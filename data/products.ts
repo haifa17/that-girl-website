@@ -19,7 +19,7 @@ export const products: Product[] = [
     {
         id: 4, name: 'The Coco Set · Green', nameFr: 'Ensemble Coco · Vert', category: 'Coco Set', price: 69.9, tag: 'Opening special', tone: 'green',
         image: local('coco-green-1.jpeg'),
-        gallery: [local('coco-green-1.jpeg'), local('coco-green-2.jpeg')],
+        gallery: [local('coco-green-1.jpeg'), local('coco-green-2.jpeg'), 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/coco-green-2-FEy365VzJA4mVrPJPJAXUiBRqvudDx.png'],
         details: [...COCO_WRAP, 'Color: Green'], detailsFr: [...COCO_WRAP_FR, 'Couleur : vert'],
     },
     {
